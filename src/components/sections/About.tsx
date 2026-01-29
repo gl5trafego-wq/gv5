@@ -1,70 +1,64 @@
-import catCareImage from "@/assets/cat-care.jpg";
+import { Heart, Sparkles } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="sobre" className="section-padding gradient-premium">
+    <section id="sobre" className="section-padding bg-background">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
-          <div className="relative order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden shadow-elevated">
-              <img
-                src={catCareImage}
-                alt="Cuidado veterinário especializado para felinos"
-                className="w-full h-auto aspect-[4/5] object-cover"
-              />
-            </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-sage-light rounded-full -z-10" />
-            <div className="absolute -top-6 -left-6 w-24 h-24 border-2 border-primary/20 rounded-full -z-10" />
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Section Label */}
+          <span className="inline-flex items-center gap-2 text-primary font-medium tracking-widest uppercase text-sm mb-6">
+            <Heart className="w-4 h-4" />
+            Quem Somos
+          </span>
+
+          {/* Headline */}
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-8">
+            Onde o cuidado encontra
+            <span className="text-primary"> a excelência</span>
+          </h2>
+
+          {/* Mission Text */}
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              A <strong className="text-foreground">VivaZhen Vet</strong> nasceu do desejo de oferecer 
+              medicina veterinária de alto padrão, com um olhar atento às necessidades únicas de cada paciente.
+            </p>
+            <p>
+              Acreditamos que cada animal merece ser tratado com <em>delicadeza, respeito e competência</em>. 
+              Por isso, investimos em formação contínua, tecnologia de ponta e, acima de tudo, 
+              em criar um ambiente onde tutores e pets se sintam verdadeiramente acolhidos.
+            </p>
+            <p>
+              Nossa missão é proporcionar <strong className="text-foreground">saúde, bem-estar e qualidade de vida</strong>, 
+              construindo vínculos de confiança que atravessam gerações.
+            </p>
           </div>
 
-          {/* Content */}
-          <div className="order-1 lg:order-2">
-            <span className="text-sm font-medium uppercase tracking-widest text-primary mb-4 block">
-              Nossa História
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-              Dedicação ao bem-estar
-              <span className="text-primary"> animal</span>
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                A VivaZhen Vet nasceu da paixão genuína pelo cuidado animal. Desde
-                2009, nos dedicamos a oferecer medicina veterinária de excelência,
-                com foco especial na saúde e bem-estar dos felinos.
-              </p>
-              <p>
-                Nossa equipe é formada por especialistas que compartilham o mesmo
-                propósito: proporcionar um atendimento humanizado, onde cada
-                paciente recebe atenção individualizada e tratamento baseado nas
-                mais recentes evidências científicas.
-              </p>
-              <p>
-                Acreditamos que a medicina veterinária vai além do diagnóstico e
-                tratamento. É sobre criar vínculos de confiança com os tutores e
-                garantir qualidade de vida para seus companheiros.
+          {/* Values */}
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+            <div className="p-8 bg-lilac-light rounded-2xl text-left">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Heart className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                Acolhimento genuíno
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Cada visita é uma oportunidade de cuidar com carinho. 
+                Nosso ambiente foi pensado para reduzir o estresse e proporcionar conforto.
               </p>
             </div>
-
-            {/* Values */}
-            <div className="grid grid-cols-2 gap-6 mt-10">
-              <div className="p-5 bg-card rounded-xl shadow-soft">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
-                  Acolhimento
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Ambiente projetado para reduzir o estresse dos pacientes
-                </p>
+            <div className="p-8 bg-lilac-light rounded-2xl text-left">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Sparkles className="w-6 h-6 text-primary" />
               </div>
-              <div className="p-5 bg-card rounded-xl shadow-soft">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
-                  Excelência
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Equipe em constante atualização científica
-                </p>
-              </div>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                Excelência científica
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Atualizações constantes, equipamentos modernos e protocolos 
+                baseados nas melhores práticas da medicina veterinária mundial.
+              </p>
             </div>
           </div>
         </div>
