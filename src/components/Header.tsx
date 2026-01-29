@@ -18,8 +18,8 @@ const Header = () => {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Especialidades", href: "#especialidades" },
-    { label: "Equipe", href: "#equipe" },
-    { label: "Diferenciais", href: "#diferenciais" },
+    { label: "A Especialista", href: "#especialista" },
+    { label: "Clínica", href: "#clinica" },
     { label: "Contato", href: "#contato" },
   ];
 
@@ -35,8 +35,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-soft py-3"
-          : "bg-transparent py-6"
+          ? "bg-background/98 backdrop-blur-md shadow-soft py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="container-wide flex items-center justify-between">
@@ -78,8 +78,8 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-4">
           <Button
             variant="premium"
-            size="lg"
-            onClick={() => window.open("https://wa.me/5511999999999", "_blank")}
+            size="default"
+            onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na VivaZhen Vet.", "_blank")}
           >
             <Phone className="w-4 h-4" />
             Agendar Consulta
@@ -120,7 +120,7 @@ const Header = () => {
             variant="premium"
             size="lg"
             className="mt-4"
-            onClick={() => window.open("https://wa.me/5511999999999", "_blank")}
+            onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na VivaZhen Vet.", "_blank")}
           >
             <Phone className="w-4 h-4" />
             Agendar Consulta
