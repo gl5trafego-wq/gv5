@@ -3,7 +3,7 @@ import Hero from "@/components/sections/Hero";
 import Authority from "@/components/sections/Authority";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
-import Specialist from "@/components/sections/Specialist";
+import Team from "@/components/sections/Team";
 import Clinic from "@/components/sections/Clinic";
 import Testimonials from "@/components/sections/Testimonials";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -28,8 +28,8 @@ const Index = () => {
         {/* 4. Especialidades */}
         <Services />
         
-        {/* 5. A Especialista – Dra. Vânia Gomes */}
-        <Specialist />
+        {/* 5. Equipe Médica */}
+        <Team />
         
         {/* 6. Nossa Clínica */}
         <Clinic />

@@ -28,7 +28,7 @@ const FinalCTA = () => {
             <Button
               variant="whatsapp"
               size="xl"
-              onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na VivaZhen Vet.", "_blank")}
+              onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
             >
               <Phone className="w-5 h-5" />
               Agendar pelo WhatsApp
