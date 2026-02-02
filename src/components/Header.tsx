@@ -53,7 +53,7 @@ const Header = () => {
           <img 
             src={logo} 
             alt="VivaZhen Vet" 
-            className="h-12 md:h-14 w-auto"
+            className="h-12 md:h-14 w-12 md:w-14 rounded-full object-cover"
           />
         </a>
 
@@ -79,7 +79,7 @@ const Header = () => {
           <Button
             variant="premium"
             size="default"
-            onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
+            onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
           >
             <Phone className="w-4 h-4" />
             Agendar Consulta
@@ -120,7 +120,7 @@ const Header = () => {
             variant="premium"
             size="lg"
             className="mt-4"
-            onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
+            onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
           >
             <Phone className="w-4 h-4" />
             Agendar Consulta

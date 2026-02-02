@@ -30,11 +30,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground text-lg mb-2">Endereço</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Rua das Palmeiras, 500 - Centro
+                  <a 
+                    href="https://maps.app.goo.gl/ggPBacf6bu7M58tb7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground leading-relaxed hover:text-primary transition-colors"
+                  >
+                    R. Gonçalo Fernandes, 321 - Jardim Bela Vista
                     <br />
-                    Santo André - SP, 09010-000
-                  </p>
+                    Santo André - SP, 09041-410
+                  </a>
                 </div>
               </div>
 
@@ -78,7 +83,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground text-lg mb-2">Instagram</h3>
-                  <p className="text-muted-foreground">@vivazhenvet</p>
+                  <a 
+                    href="https://www.instagram.com/vivazhenvet/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    @vivazhenvet
+                  </a>
                 </div>
               </div>
             </div>
@@ -88,7 +100,7 @@ const Contact = () => {
               <Button
                 variant="premium"
                 size="xl"
-                onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
+                onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
               >
                 <Phone className="w-5 h-5" />
                 Agendar pelo WhatsApp
@@ -99,14 +111,14 @@ const Contact = () => {
           {/* Map */}
           <div className="rounded-2xl overflow-hidden shadow-elevated h-[450px] lg:h-auto min-h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8877788888!2d-46.5288!3d-23.6566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM5JzIzLjgiUyA0NsKwMzEnNDMuNyJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5!2d-46.5288!3d-23.6566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce42b8c8b1b3d3%3A0x1234567890abcdef!2sR.%20Gon%C3%A7alo%20Fernandes%2C%20321%20-%20Jardim%20Bela%20Vista%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009041-410!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "400px" }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização VivaZhen Vet - Santo André"
+              title="Localização VivaZhen Vet - R. Gonçalo Fernandes, 321 - Jardim Bela Vista, Santo André"
             />
           </div>
         </div>
