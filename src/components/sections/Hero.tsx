@@ -43,7 +43,7 @@ const Hero = () => {
             <Button
               variant="premium"
               size="xl"
-              onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
+              onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
             >
               <Phone className="w-5 h-5" />
               Agendar Consulta

@@ -28,7 +28,7 @@ const FinalCTA = () => {
             <Button
               variant="whatsapp"
               size="xl"
-              onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
+              onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
             >
               <Phone className="w-5 h-5" />
               Agendar pelo WhatsApp
@@ -36,10 +36,7 @@ const FinalCTA = () => {
             <Button
               size="xl"
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-              onClick={() => {
-                const element = document.querySelector("#contato");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20saber%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20consulta.", "_blank")}
             >
               <Calendar className="w-5 h-5" />
               Ver horários

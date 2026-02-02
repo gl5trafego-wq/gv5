@@ -9,7 +9,7 @@ const credentials = [
   {
     icon: GraduationCap,
     title: "Formação Especializada",
-    description: "Equipe com pós-graduação em medicina felina e cardiologia",
+    description: "Equipe com pós-graduação em medicina felina",
   },
   {
     icon: Users,
