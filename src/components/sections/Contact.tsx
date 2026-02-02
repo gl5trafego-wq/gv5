@@ -58,7 +58,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground text-lg mb-2">Telefone / WhatsApp</h3>
-                  <p className="text-muted-foreground">(11) 99999-9999</p>
+                  <p className="text-muted-foreground">(11) 97254-7757</p>
                 </div>
               </div>
 
@@ -88,7 +88,7 @@ const Contact = () => {
               <Button
                 variant="premium"
                 size="xl"
-                onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na VivaZhen Vet.", "_blank")}
+                onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
               >
                 <Phone className="w-5 h-5" />
                 Agendar pelo WhatsApp

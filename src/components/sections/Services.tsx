@@ -1,42 +1,60 @@
-import { Cat, Stethoscope, Heart, Activity, Syringe, Scissors } from "lucide-react";
+import { Cat, Stethoscope, Sparkles, Apple, Activity, Bone, Heart, Eye } from "lucide-react";
 
 const services = [
   {
     icon: Cat,
-    title: "Medicina Felina",
+    title: "Especialista em Felinos",
     description:
       "Atendimento especializado para gatos, com ambiente Cat Friendly certificado e protocolos desenvolvidos especificamente para o bem-estar felino.",
     highlight: true,
   },
   {
     icon: Stethoscope,
-    title: "Clínica Geral",
+    title: "Clínica Geral de Cães e Gatos",
     description:
       "Consultas completas, diagnóstico preventivo e acompanhamento contínuo da saúde do seu pet.",
   },
   {
-    icon: Heart,
-    title: "Cardiologia",
+    icon: Sparkles,
+    title: "Dermatologia",
     description:
-      "Avaliação cardíaca com eletrocardiograma, ecocardiograma e monitoramento especializado.",
+      "Diagnóstico e tratamento de doenças de pele, pelos e ouvidos com abordagem especializada.",
+  },
+  {
+    icon: Apple,
+    title: "Nutrologia",
+    description:
+      "Orientação nutricional personalizada para cada fase da vida do seu animal.",
   },
   {
     icon: Activity,
-    title: "Ultrassonografia",
+    title: "Endocrinologia",
     description:
-      "Exames de imagem de alta definição para diagnósticos precisos e acompanhamento de tratamentos.",
+      "Tratamento de distúrbios hormonais como diabetes, hipotireoidismo e outras condições.",
   },
   {
-    icon: Syringe,
-    title: "Vacinação",
+    icon: Heart,
+    title: "Nefrologia",
     description:
-      "Protocolo vacinal personalizado de acordo com a idade e estilo de vida do seu animal.",
+      "Diagnóstico e acompanhamento de doenças renais com protocolos atualizados.",
   },
   {
-    icon: Scissors,
-    title: "Cirurgias",
+    icon: Bone,
+    title: "Ortopedia e Neurologia",
     description:
-      "Centro cirúrgico equipado para procedimentos eletivos e de urgência com anestesia inalatória segura.",
+      "Avaliação e tratamento de problemas locomotores e neurológicos.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Gastroenterologia",
+    description:
+      "Cuidado especializado para distúrbios digestivos e doenças gastrointestinais.",
+  },
+  {
+    icon: Eye,
+    title: "Oftalmologia",
+    description:
+      "Diagnóstico e tratamento de doenças oculares com equipamentos especializados.",
   },
 ];
 
@@ -61,7 +79,7 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className={`group p-8 rounded-2xl transition-all duration-300 ${

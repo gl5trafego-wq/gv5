@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Heart } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,9 +9,12 @@ const Footer = () => {
       <div className="container-wide">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <span className="font-serif text-2xl font-semibold">VivaZhen</span>
-            <span className="font-serif text-xl font-light opacity-70">Vet</span>
+          <div className="flex items-center">
+            <img 
+              src={logo} 
+              alt="VivaZhen Vet" 
+              className="h-12 w-auto brightness-0 invert"
+            />
           </div>
 
           {/* Tagline */}

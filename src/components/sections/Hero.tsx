@@ -43,7 +43,7 @@ const Hero = () => {
             <Button
               variant="premium"
               size="xl"
-              onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na VivaZhen Vet.", "_blank")}
+              onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
             >
               <Phone className="w-5 h-5" />
               Agendar Consulta
@@ -52,11 +52,11 @@ const Hero = () => {
               variant="premium-outline"
               size="xl"
               onClick={() => {
-                const element = document.querySelector("#especialista");
+                const element = document.querySelector("#equipe");
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Conheça a Dra. Vânia
+              Conheça Nossa Equipe
             </Button>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Hero = () => {
                 <Heart className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="font-semibold text-foreground text-sm">+15 Anos</p>
+                <p className="font-semibold text-foreground text-sm">+10 Anos</p>
                 <p className="text-xs text-muted-foreground">de experiência</p>
               </div>
             </div>

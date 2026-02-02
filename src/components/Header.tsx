@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +19,7 @@ const Header = () => {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Especialidades", href: "#especialidades" },
-    { label: "A Especialista", href: "#especialista" },
+    { label: "Equipe", href: "#equipe" },
     { label: "Clínica", href: "#clinica" },
     { label: "Contato", href: "#contato" },
   ];
@@ -47,14 +48,13 @@ const Header = () => {
             e.preventDefault();
             scrollToSection("#inicio");
           }}
-          className="flex items-center gap-2"
+          className="flex items-center"
         >
-          <span className="font-serif text-2xl md:text-3xl font-semibold text-primary tracking-tight">
-            VivaZhen
-          </span>
-          <span className="font-serif text-xl md:text-2xl font-light text-muted-foreground">
-            Vet
-          </span>
+          <img 
+            src={logo} 
+            alt="VivaZhen Vet" 
+            className="h-12 md:h-14 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -79,7 +79,7 @@ const Header = () => {
           <Button
             variant="premium"
             size="default"
-            onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na VivaZhen Vet.", "_blank")}
+            onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
           >
             <Phone className="w-4 h-4" />
             Agendar Consulta
@@ -120,7 +120,7 @@ const Header = () => {
             variant="premium"
             size="lg"
             className="mt-4"
-            onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na VivaZhen Vet.", "_blank")}
+            onClick={() => window.open("https://wa.me/5511972547757", "_blank")}
           >
             <Phone className="w-4 h-4" />
             Agendar Consulta
