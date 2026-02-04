@@ -1,20 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Award, Heart, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-clinic.jpg";
-
 const Hero = () => {
-  return (
-    <section
-      id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
+  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Clínica VivaZhen Vet - Ambiente acolhedor"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Clínica VivaZhen Vet - Ambiente acolhedor" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
       </div>
 
@@ -39,30 +30,22 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-            <Button
-              variant="premium"
-              size="xl"
-              onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
-            >
+            <Button variant="premium" size="xl" onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}>
               <Phone className="w-5 h-5" />
               Agendar pelo WhatsApp
             </Button>
-            <Button
-              variant="premium-outline"
-              size="xl"
-              onClick={() => {
-                const element = document.querySelector("#equipe");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
+            <Button variant="premium-outline" size="xl" onClick={() => {
+            const element = document.querySelector("#equipe");
+            element?.scrollIntoView({
+              behavior: "smooth"
+            });
+          }}>
               Conheça Nossa Equipe
             </Button>
           </div>
           
           {/* Trust message */}
-          <p className="text-sm text-muted-foreground mt-4 animate-fade-up delay-300">
-            🟢 Resposta rápida durante o horário de atendimento.
-          </p>
+          
         </div>
       </div>
 
@@ -100,8 +83,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
