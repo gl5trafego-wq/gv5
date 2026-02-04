@@ -5,7 +5,7 @@ const services = [
     icon: Cat,
     title: "Especialista em Felinos",
     description:
-      "Atendimento especializado para gatos, com ambiente Cat Friendly certificado e protocolos desenvolvidos especificamente para o bem-estar felino.",
+      "Atendimento especializado para gatos, com ambiente preparado e protocolos desenvolvidos especificamente para o bem-estar felino.",
     highlight: true,
   },
   {
