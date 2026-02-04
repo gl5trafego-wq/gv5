@@ -3,13 +3,13 @@ import { Award, GraduationCap, Users, Star } from "lucide-react";
 const credentials = [
   {
     icon: Award,
-    title: "Certificação Cat Friendly",
-    description: "Clínica certificada pela International Society of Feline Medicine",
+    title: "Medicina de Excelência",
+    description: "Referência em medicina veterinária de excelência para cães e gatos",
   },
   {
     icon: GraduationCap,
     title: "Formação Especializada",
-    description: "Equipe com pós-graduação em medicina felina",
+    description: "Equipe com formação contínua e atualização científica",
   },
   {
     icon: Users,

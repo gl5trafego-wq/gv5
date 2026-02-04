@@ -28,14 +28,13 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-[1.1] mb-6 animate-fade-up delay-100">
-            Cuidado especializado
-            <span className="block text-primary mt-2">para quem você ama</span>
+            Clínica veterinária de alto padrão
+            <span className="block text-primary mt-2">com atendimento médico especializado para cães e gatos.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl animate-fade-up delay-200">
-            Referência em medicina felina e atendimento humanizado. 
-            Cada paciente recebe atenção individualizada com a delicadeza que merece.
+            Profissionais experientes, estrutura moderna e um cuidado completo para garantir saúde, segurança e bem-estar ao seu pet.
           </p>
 
           {/* CTAs */}
@@ -46,7 +45,7 @@ const Hero = () => {
               onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
             >
               <Phone className="w-5 h-5" />
-              Agendar Consulta
+              Agendar pelo WhatsApp
             </Button>
             <Button
               variant="premium-outline"
@@ -59,6 +58,11 @@ const Hero = () => {
               Conheça Nossa Equipe
             </Button>
           </div>
+          
+          {/* Trust message */}
+          <p className="text-sm text-muted-foreground mt-4 animate-fade-up delay-300">
+            🟢 Resposta rápida durante o horário de atendimento.
+          </p>
         </div>
       </div>
 
@@ -71,8 +75,8 @@ const Hero = () => {
                 <Award className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="font-semibold text-foreground text-sm">Cat Friendly</p>
-                <p className="text-xs text-muted-foreground">Certificação ISFM</p>
+                <p className="font-semibold text-foreground text-sm">Alto Padrão</p>
+                <p className="text-xs text-muted-foreground">Estrutura moderna</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -89,8 +93,8 @@ const Hero = () => {
                 <Shield className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="font-semibold text-foreground text-sm">Especialista</p>
-                <p className="text-xs text-muted-foreground">em Medicina Felina</p>
+                <p className="font-semibold text-foreground text-sm">Cães e Gatos</p>
+                <p className="text-xs text-muted-foreground">Atendimento especializado</p>
               </div>
             </div>
           </div>

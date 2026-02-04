@@ -1,11 +1,13 @@
-import { Shield, Sparkles, Leaf, Volume2 } from "lucide-react";
+import { Shield, Sparkles, Leaf, Palette } from "lucide-react";
 import catCareImage from "@/assets/cat-care.jpg";
+import ambienteClinica from "@/assets/ambiente-clinica.jpg";
+import salaAtendimento from "@/assets/sala-atendimento.jpg";
 
 const features = [
   {
     icon: Shield,
-    title: "Ambiente Cat Friendly",
-    description: "Salas separadas para gatos, com feromônios e música relaxante",
+    title: "Ambiente Acolhedor",
+    description: "Salas preparadas para cães e gatos, com feromônios e música relaxante",
   },
   {
     icon: Sparkles,
@@ -13,14 +15,14 @@ const features = [
     description: "Equipamentos de última geração para diagnósticos precisos",
   },
   {
-    icon: Leaf,
-    title: "Espaço Acolhedor",
-    description: "Decoração pensada para transmitir calma e conforto",
+    icon: Palette,
+    title: "Cromoterapia",
+    description: "Salas com cromoterapia para ajudar a reduzir estresse e ansiedade durante os atendimentos",
   },
   {
-    icon: Volume2,
-    title: "Baixo Estresse",
-    description: "Protocolos que minimizam o desconforto dos pacientes",
+    icon: Leaf,
+    title: "Espaço Premium",
+    description: "Decoração sofisticada pensada para transmitir calma e conforto",
   },
 ];
 
@@ -35,8 +37,8 @@ const Clinic = () => {
               Nossa Clínica
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-              Um espaço pensado para
-              <span className="text-primary"> o bem-estar</span>
+              Estrutura pensada para
+              <span className="text-primary"> o bem-estar do seu pet</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
               Nossa estrutura foi projetada para oferecer conforto aos tutores 
@@ -64,14 +66,30 @@ const Clinic = () => {
             </div>
           </div>
 
-          {/* Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-elevated">
+          {/* Images Grid */}
+          <div className="relative grid grid-cols-2 gap-4">
+            <div className="rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={catCareImage}
-                alt="Interior da clínica VivaZhen Vet"
+                alt="Equipe VivaZhen Vet com paciente"
                 className="w-full h-auto aspect-[4/5] object-cover"
               />
+            </div>
+            <div className="space-y-4">
+              <div className="rounded-2xl overflow-hidden shadow-medium">
+                <img
+                  src={ambienteClinica}
+                  alt="Recepção da clínica VivaZhen Vet"
+                  className="w-full h-auto aspect-[4/3] object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-medium">
+                <img
+                  src={salaAtendimento}
+                  alt="Sala de atendimento VivaZhen Vet"
+                  className="w-full h-auto aspect-[4/3] object-cover"
+                />
+              </div>
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary rounded-full -z-10" />

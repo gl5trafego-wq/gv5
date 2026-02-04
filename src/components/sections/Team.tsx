@@ -1,16 +1,19 @@
-import { GraduationCap, Cat, Heart, Sparkles } from "lucide-react";
+import { GraduationCap, Heart } from "lucide-react";
+import draVaniaImg from "@/assets/dra-vania-gomes.jpg";
+import draBrunaImg from "@/assets/dra-bruna-mainente.jpg";
+import draAnnaImg from "@/assets/dra-anna-fernandes.jpg";
 
 const teamMembers = [
   {
     name: "Vânia Gomes",
-    role: "Diretora Clínica",
+    role: "Médica Veterinária",
     credentials: [
       "Formação em Medicina Veterinária — 2015",
       "10 anos de experiência total",
       "Especialista em felinos — desde 2018",
       "7 anos dedicados exclusivamente a gatos",
     ],
-    icon: Cat,
+    image: draVaniaImg,
     highlight: true,
   },
   {
@@ -21,7 +24,18 @@ const teamMembers = [
       "Mestre em Reiki",
       "7 anos de experiência",
     ],
-    icon: Sparkles,
+    image: draBrunaImg,
+    highlight: false,
+  },
+  {
+    name: "Anna Fernandes",
+    role: "Médica Veterinária",
+    credentials: [
+      "Médica Veterinária",
+      "Especializada em medicina integrativa e nutrologia",
+      "7 anos de experiência",
+    ],
+    image: draAnnaImg,
     highlight: false,
   },
 ];
@@ -47,41 +61,35 @@ const Team = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className={`relative p-8 rounded-2xl transition-all duration-300 ${
+              className={`relative p-6 rounded-2xl transition-all duration-300 ${
                 member.highlight
                   ? "bg-primary text-primary-foreground shadow-elevated"
                   : "bg-card shadow-soft hover:shadow-medium"
               }`}
             >
-              {/* Icon */}
-              <div
-                className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${
-                  member.highlight
-                    ? "bg-primary-foreground/20"
-                    : "bg-lilac-light"
-                }`}
-              >
-                <member.icon
-                  className={`w-8 h-8 ${
-                    member.highlight ? "text-primary-foreground" : "text-primary"
-                  }`}
+              {/* Photo */}
+              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 
               {/* Name & Role */}
               <h3
-                className={`font-serif text-2xl font-semibold mb-2 ${
+                className={`font-serif text-xl font-semibold mb-2 text-center ${
                   member.highlight ? "text-primary-foreground" : "text-foreground"
                 }`}
               >
                 {member.name}
               </h3>
               <p
-                className={`font-medium text-lg mb-6 ${
+                className={`font-medium text-base mb-4 text-center ${
                   member.highlight ? "text-primary-foreground/80" : "text-primary"
                 }`}
               >
@@ -89,24 +97,24 @@ const Team = () => {
               </p>
 
               {/* Credentials */}
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {member.credentials.map((credential, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                  <div key={index} className="flex items-start gap-2">
                     <div
-                      className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
+                      className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
                         member.highlight
                           ? "bg-primary-foreground/20"
                           : "bg-lilac-light"
                       }`}
                     >
                       <GraduationCap
-                        className={`w-3 h-3 ${
+                        className={`w-2.5 h-2.5 ${
                           member.highlight ? "text-primary-foreground" : "text-primary"
                         }`}
                       />
                     </div>
                     <span
-                      className={`text-sm ${
+                      className={`text-xs leading-relaxed ${
                         member.highlight ? "text-primary-foreground/90" : "text-foreground"
                       }`}
                     >
