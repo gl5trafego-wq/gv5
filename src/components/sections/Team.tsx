@@ -72,11 +72,11 @@ const Team = () => {
               }`}
             >
               {/* Photo */}
-              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 flex items-center justify-center">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-[center_30%]"
                 />
               </div>
 

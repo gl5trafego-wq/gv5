@@ -5,6 +5,7 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Team from "@/components/sections/Team";
 import Clinic from "@/components/sections/Clinic";
+import ClinicGallery from "@/components/sections/ClinicGallery";
 import Testimonials from "@/components/sections/Testimonials";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Contact from "@/components/sections/Contact";
@@ -34,7 +35,10 @@ const Index = () => {
         {/* 6. Nossa Clínica */}
         <Clinic />
         
-        {/* 7. Feedbacks / Pacientes */}
+        {/* 7. Galeria de Fotos */}
+        <ClinicGallery />
+        
+        {/* 8. Feedbacks / Pacientes */}
         <Testimonials />
         
         {/* 8. CTA final para agendamento */}
