@@ -49,25 +49,41 @@ const ClinicGallery = () => {
     // Only show -2, -1, 0, 1, 2 positions
     if (Math.abs(normalizedDiff) > 2) {
       return {
-        transform: "translateX(0) scale(0.5) rotateY(0deg)",
+        transform: "translateX(0) translateZ(-300px) scale(0.5) rotateY(0deg)",
         opacity: 0,
         zIndex: 0,
+        visibility: "hidden" as const,
         pointerEvents: "none" as const,
       };
     }
 
-    const baseTranslate = normalizedDiff * 180;
-    const scale = normalizedDiff === 0 ? 1 : 0.75;
-    const rotateY = normalizedDiff * -15;
-    const opacity = normalizedDiff === 0 ? 1 : 0.7;
+    const isCenter = normalizedDiff === 0;
+    const baseTranslate = normalizedDiff * 220;
+    const scale = isCenter ? 1 : 0.85;
+    const rotateY = normalizedDiff * -25;
+    const translateZ = isCenter ? 100 : -50;
     const zIndex = 10 - Math.abs(normalizedDiff);
 
     return {
-      transform: `translateX(${baseTranslate}px) scale(${scale}) rotateY(${rotateY}deg)`,
-      opacity,
+      transform: `translateX(${baseTranslate}px) translateZ(${translateZ}px) scale(${scale}) rotateY(${rotateY}deg)`,
+      opacity: 1,
       zIndex,
-      pointerEvents: normalizedDiff === 0 ? ("auto" as const) : ("none" as const),
+      visibility: "visible" as const,
+      pointerEvents: isCenter ? ("auto" as const) : ("none" as const),
     };
+  };
+
+  const getSlideFilter = (index: number) => {
+    const diff = index - currentIndex;
+    const totalImages = galleryImages.length;
+    let normalizedDiff = diff;
+    if (diff > totalImages / 2) normalizedDiff = diff - totalImages;
+    if (diff < -totalImages / 2) normalizedDiff = diff + totalImages;
+    
+    if (normalizedDiff === 0) {
+      return "none";
+    }
+    return "brightness(0.92) saturate(0.95)";
   };
 
   return (
@@ -89,26 +105,49 @@ const ClinicGallery = () => {
         </div>
 
         {/* 3D Carousel - Desktop */}
-        <div className="hidden md:block relative">
+        <div className="hidden md:block relative" style={{ isolation: "isolate" }}>
           <div 
-            className="relative h-[400px] flex items-center justify-center"
-            style={{ perspective: "1000px" }}
+            className="relative h-[420px] flex items-center justify-center"
+            style={{ 
+              perspective: "1200px",
+              perspectiveOrigin: "center center"
+            }}
           >
             <div 
               className="relative w-full h-full flex items-center justify-center"
-              style={{ transformStyle: "preserve-3d" }}
+              style={{ 
+                transformStyle: "preserve-3d",
+                transform: "translateZ(0)"
+              }}
             >
               {galleryImages.map((image, index) => (
                 <div
                   key={index}
                   className="absolute transition-all duration-500 ease-out"
-                  style={getSlideStyle(index)}
+                  style={{
+                    ...getSlideStyle(index),
+                    transformStyle: "preserve-3d",
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden",
+                    willChange: "transform",
+                    transformOrigin: "center center",
+                  }}
                 >
-                  <div className="rounded-2xl overflow-hidden shadow-elevated">
+                  <div 
+                    className="relative rounded-2xl overflow-hidden shadow-elevated"
+                    style={{
+                      width: "420px",
+                      height: "300px",
+                      contain: "paint",
+                    }}
+                  >
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-[400px] h-[280px] object-cover"
+                      className="w-full h-full object-cover object-center block"
+                      style={{
+                        filter: getSlideFilter(index),
+                      }}
                     />
                   </div>
                 </div>
