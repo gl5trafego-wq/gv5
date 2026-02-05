@@ -1,10 +1,8 @@
 import { Heart } from "lucide-react";
 import aboutGatoConforto from "@/assets/about-gato-conforto.jpg";
 import aboutFachadaExterna from "@/assets/about-fachada-externa.jpg";
-
 const About = () => {
-  return (
-    <section id="sobre" className="section-padding bg-background">
+  return <section id="sobre" className="section-padding bg-background">
       <div className="container-wide">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Label */}
@@ -25,8 +23,7 @@ const About = () => {
               A <strong className="text-foreground">VivaZhen Vet</strong> nasceu do desejo de oferecer 
               medicina veterinária de alto padrão, com um olhar atento às necessidades únicas de cada paciente.
             </p>
-            <p>
-              Acreditamos que cada animal merece ser tratado com <em>delicadeza, respeito e competência</em>. 
+            <p>Acreditamos que cada animal merece ser tratado com delicadeza, respeito e competência. Por isso, investimos em formação contínua, tecnologia de ponta e, acima de tudo, em criar um ambiente onde responsáveis e pets se sintam verdadeiramente acolhidos.<em>delicadeza, respeito e competência</em>. 
               Por isso, investimos em formação contínua, tecnologia de ponta e, acima de tudo, 
               em criar um ambiente onde tutores e pets se sintam verdadeiramente acolhidos.
             </p>
@@ -39,24 +36,14 @@ const About = () => {
           {/* Photo Cards - Replacing text cards */}
           <div className="grid md:grid-cols-2 gap-6 mt-12">
             <div className="rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-shadow duration-300">
-              <img 
-                src={aboutGatoConforto} 
-                alt="Ambiente acolhedor para gatos na VivaZhen Vet" 
-                className="w-full h-64 object-cover"
-              />
+              <img src={aboutGatoConforto} alt="Ambiente acolhedor para gatos na VivaZhen Vet" className="w-full h-64 object-cover" />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-shadow duration-300">
-              <img 
-                src={aboutFachadaExterna} 
-                alt="Fachada externa da clínica VivaZhen Vet" 
-                className="w-full h-64 object-cover"
-              />
+              <img src={aboutFachadaExterna} alt="Fachada externa da clínica VivaZhen Vet" className="w-full h-64 object-cover" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
