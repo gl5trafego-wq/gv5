@@ -14,17 +14,6 @@ const teamMembers = [
       "7 anos dedicados exclusivamente a gatos",
     ],
     image: draVaniaImg,
-    highlight: true,
-  },
-  {
-    name: "Bruna Mainente",
-    role: "Médica Veterinária",
-    credentials: [
-      "Médica Veterinária",
-      "Mestre em Reiki",
-      "7 anos de experiência",
-    ],
-    image: draBrunaImg,
     highlight: false,
   },
   {
@@ -36,6 +25,17 @@ const teamMembers = [
       "7 anos de experiência",
     ],
     image: draAnnaImg,
+    highlight: true,
+  },
+  {
+    name: "Bruna Mainente",
+    role: "Médica Veterinária",
+    credentials: [
+      "Médica Veterinária",
+      "Mestre em Reiki",
+      "7 anos de experiência",
+    ],
+    image: draBrunaImg,
     highlight: false,
   },
 ];
