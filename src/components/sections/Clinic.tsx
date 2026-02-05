@@ -58,15 +58,19 @@ const Clinic = () => {
 
           {/* Images Grid */}
           <div className="relative grid grid-cols-2 gap-4">
-            <div className="rounded-2xl overflow-hidden shadow-elevated">
-              <img alt="Equipe VivaZhen Vet com paciente" className="w-full h-auto aspect-[4/5] object-cover" src="/lovable-uploads/203958fa-5c93-4e0e-939d-e51c6ba054b1.png" />
+            <div className="rounded-2xl overflow-hidden shadow-elevated h-full">
+              <img 
+                alt="Equipe VivaZhen Vet com paciente" 
+                className="w-full h-full object-cover" 
+                src="/lovable-uploads/203958fa-5c93-4e0e-939d-e51c6ba054b1.png" 
+              />
             </div>
-            <div className="space-y-4">
-              <div className="rounded-2xl overflow-hidden shadow-medium">
-                <img src={ambienteClinica} alt="Recepção da clínica VivaZhen Vet" className="w-full h-auto aspect-[4/3] object-cover" />
+            <div className="flex flex-col gap-4">
+              <div className="rounded-2xl overflow-hidden shadow-medium flex-1">
+                <img src={ambienteClinica} alt="Recepção da clínica VivaZhen Vet" className="w-full h-full object-cover" />
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-medium">
-                <img src={salaAtendimento} alt="Sala de atendimento VivaZhen Vet" className="w-full h-auto aspect-[4/3] object-cover" />
+              <div className="rounded-2xl overflow-hidden shadow-medium flex-1">
+                <img src={salaAtendimento} alt="Sala de atendimento VivaZhen Vet" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Decorative elements */}

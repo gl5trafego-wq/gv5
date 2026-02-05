@@ -1,4 +1,6 @@
-import { Heart, Sparkles } from "lucide-react";
+import { Heart } from "lucide-react";
+import aboutGatoConforto from "@/assets/about-gato-conforto.jpg";
+import aboutFachadaExterna from "@/assets/about-fachada-externa.jpg";
 
 const About = () => {
   return (
@@ -34,31 +36,21 @@ const About = () => {
             </p>
           </div>
 
-          {/* Values */}
+          {/* Photo Cards - Replacing text cards */}
           <div className="grid md:grid-cols-2 gap-6 mt-12">
-            <div className="p-8 bg-lilac-light rounded-2xl text-left">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                Acolhimento genuíno
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Cada visita é uma oportunidade de cuidar com carinho. 
-                Nosso ambiente foi pensado para reduzir o estresse e proporcionar conforto.
-              </p>
+            <div className="rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-shadow duration-300">
+              <img 
+                src={aboutGatoConforto} 
+                alt="Ambiente acolhedor para gatos na VivaZhen Vet" 
+                className="w-full h-64 object-cover"
+              />
             </div>
-            <div className="p-8 bg-lilac-light rounded-2xl text-left">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Sparkles className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                Excelência científica
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Atualizações constantes, equipamentos modernos e protocolos 
-                baseados nas melhores práticas da medicina veterinária mundial.
-              </p>
+            <div className="rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-shadow duration-300">
+              <img 
+                src={aboutFachadaExterna} 
+                alt="Fachada externa da clínica VivaZhen Vet" 
+                className="w-full h-64 object-cover"
+              />
             </div>
           </div>
         </div>
