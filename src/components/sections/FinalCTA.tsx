@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Heart } from "lucide-react";
-
 const FinalCTA = () => {
-  return (
-    <section className="section-padding gradient-purple text-primary-foreground">
+  return <section className="section-padding gradient-purple text-primary-foreground">
       <div className="container-wide">
         <div className="max-w-3xl mx-auto text-center">
           {/* Icon */}
@@ -25,32 +23,20 @@ const FinalCTA = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="whatsapp"
-              size="xl"
-              onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
-            >
+            <Button variant="whatsapp" size="xl" onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}>
               <Phone className="w-5 h-5" />
               Agendar pelo WhatsApp
             </Button>
-            <Button
-              size="xl"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-              onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20saber%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20consulta.", "_blank")}
-            >
+            <Button size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20saber%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20consulta.", "_blank")}>
               <Calendar className="w-5 h-5" />
               Ver horários
             </Button>
           </div>
 
           {/* Trust note */}
-          <p className="text-sm text-primary-foreground/70 mt-8">
-            Atendimento de segunda a sexta, das 8h às 20h • Sábados das 8h às 14h
-          </p>
+          <p className="text-sm text-primary-foreground/70 mt-8">Atendimento de segunda a sexta, das 9h às 18h • Sábados das 9h às 13h</p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FinalCTA;
