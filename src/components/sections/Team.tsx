@@ -18,7 +18,7 @@ const teamMembers = [
   },
   {
     name: "Anna Fernandes",
-    role: "Médica Veterinária",
+    role: "Médica Veterinária • Fundadora",
     credentials: [
       "Médica Veterinária",
       "Especializada em medicina integrativa e nutrologia",

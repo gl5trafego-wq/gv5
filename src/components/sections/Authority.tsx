@@ -13,13 +13,13 @@ const credentials = [
   },
   {
     icon: Users,
-    title: "+5.000 Pacientes",
+    title: "+1.000 Pacientes",
     description: "Famílias que confiam em nosso cuidado",
   },
   {
     icon: Star,
     title: "5 Estrelas",
-    description: "Avaliação máxima no Google pelos tutores",
+    description: "Avaliação máxima no Google pelos responsáveis",
   },
 ];
 

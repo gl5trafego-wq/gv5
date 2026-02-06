@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo.jpg";
@@ -15,6 +15,18 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   const navItems = [
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
@@ -24,17 +36,17 @@ const Header = () => {
     { label: "Contato", href: "#contato" },
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = useCallback((href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
-  };
+  }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${
         isScrolled
           ? "bg-background/98 backdrop-blur-md shadow-soft py-3"
           : "bg-transparent py-5"
@@ -88,18 +100,29 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 text-primary"
+          className="lg:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="lg:hidden fixed inset-0 top-0 bg-black/40 z-[55]"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md shadow-medium transition-all duration-300 ${
-          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`lg:hidden fixed top-[64px] left-0 right-0 bg-background/98 backdrop-blur-md shadow-medium z-[60] transition-all duration-300 ${
+          isMobileMenuOpen 
+            ? "opacity-100 visible translate-y-0" 
+            : "opacity-0 invisible -translate-y-2"
         }`}
       >
         <nav className="container-wide py-6 flex flex-col gap-4">
@@ -111,7 +134,7 @@ const Header = () => {
                 e.preventDefault();
                 scrollToSection(item.href);
               }}
-              className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+              className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-3 min-h-[44px] flex items-center"
             >
               {item.label}
             </a>
@@ -119,8 +142,11 @@ const Header = () => {
           <Button
             variant="premium"
             size="lg"
-            className="mt-4"
-            onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}
+            className="mt-4 w-full"
+            onClick={() => {
+              window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank");
+              setIsMobileMenuOpen(false);
+            }}
           >
             <Phone className="w-4 h-4" />
             Agendar Consulta

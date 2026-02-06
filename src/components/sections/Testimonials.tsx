@@ -3,19 +3,19 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Fernanda Oliveira",
-    pet: "Mãe do Simba",
+    pet: "Responsável do Simba",
     text: "Finalmente encontrei uma clínica onde meu gato não fica estressado. A Dra. Vânia tem um carinho imenso pelos felinos e isso faz toda a diferença. Recomendo de olhos fechados!",
     rating: 5,
   },
   {
     name: "Ricardo Santos",
-    pet: "Pai da Luna e do Thor",
+    pet: "Responsável da Luna e do Thor",
     text: "Atendimento impecável do início ao fim. A equipe explica tudo com paciência e o ambiente é muito acolhedor. Meus pets são tratados como se fossem da família deles.",
     rating: 5,
   },
   {
     name: "Marina Costa",
-    pet: "Mãe da Mel",
+    pet: "Responsável da Mel",
     text: "A Mel tem problemas cardíacos e a cardiologista da VivaZhen salvou a vida dela. Sou eternamente grata pelo profissionalismo e humanidade de toda a equipe.",
     rating: 5,
   },
@@ -83,7 +83,7 @@ const Testimonials = () => {
               ))}
             </div>
             <span className="text-sm font-medium text-foreground">
-              5.0 no Google • +200 avaliações
+              5.0 no Google
             </span>
           </div>
         </div>
