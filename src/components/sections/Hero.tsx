@@ -30,11 +30,11 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-            <Button variant="premium" size="xl" onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}>
-              <Phone className="w-5 h-5" />
+            <Button variant="premium" size="xl" className="w-full sm:w-auto whitespace-normal text-center" onClick={() => window.open("https://wa.me/5511972547757?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20VivaZhen%20Vet.", "_blank")}>
+              <Phone className="w-5 h-5 flex-shrink-0" />
               Agendar pelo WhatsApp
             </Button>
-            <Button variant="premium-outline" size="xl" onClick={() => {
+            <Button variant="premium-outline" size="xl" className="w-full sm:w-auto whitespace-normal text-center" onClick={() => {
             const element = document.querySelector("#equipe");
             element?.scrollIntoView({
               behavior: "smooth"

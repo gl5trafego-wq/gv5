@@ -23,9 +23,10 @@ const About = () => {
               A <strong className="text-foreground">VivaZhen Vet</strong> nasceu do desejo de oferecer 
               medicina veterinária de alto padrão, com um olhar atento às necessidades únicas de cada paciente.
             </p>
-            <p>Acreditamos que cada animal merece ser tratado com delicadeza, respeito e competência. Por isso, investimos em formação contínua, tecnologia de ponta e, acima de tudo, em criar um ambiente onde responsáveis e pets se sintam verdadeiramente acolhidos.<em>delicadeza, respeito e competência</em>. 
+            <p>
+              Acreditamos que cada animal merece ser tratado com <em>delicadeza, respeito e competência</em>. 
               Por isso, investimos em formação contínua, tecnologia de ponta e, acima de tudo, 
-              em criar um ambiente onde tutores e pets se sintam verdadeiramente acolhidos.
+              em criar um ambiente onde responsáveis e pets se sintam verdadeiramente acolhidos.
             </p>
             <p>
               Nossa missão é proporcionar <strong className="text-foreground">saúde, bem-estar e qualidade de vida</strong>, 

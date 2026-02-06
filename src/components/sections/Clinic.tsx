@@ -5,7 +5,7 @@ import salaAtendimento from "@/assets/sala-atendimento.jpg";
 const features = [{
   icon: Shield,
   title: "Ambiente Acolhedor",
-  description: "Salas preparadas para cães e gatos, com feromônios e música relaxante"
+  description: "Salas preparadas para cães e gatos, com música relaxante"
 }, {
   icon: Sparkles,
   title: "Tecnologia de Ponta",
@@ -33,7 +33,7 @@ const Clinic = () => {
               <span className="text-primary"> o bem-estar do seu pet</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Nossa estrutura foi projetada para oferecer conforto aos tutores 
+              Nossa estrutura foi projetada para oferecer conforto aos responsáveis 
               e tranquilidade aos pacientes. Cada detalhe foi escolhido com cuidado 
               para criar uma experiência diferenciada.
             </p>
