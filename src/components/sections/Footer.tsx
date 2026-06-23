@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background pt-16 pb-8">
       <div className="container-wide">
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Col 1 — Marca */}
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -55,14 +55,6 @@ const Footer = () => {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/especialidades"
-                  className="hover:text-secondary transition-colors"
-                >
-                  Especialidades
-                </Link>
-              </li>
               {sections.slice(1).map((s) => (
                 <li key={s.label}>
                   <Link
@@ -73,26 +65,37 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/especialidades"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Especialidades
+                </Link>
+              </li>
             </ul>
+          </div>
 
-            <h4 className="font-serif text-sm font-semibold mt-6 mb-3 text-background/85">
+          {/* Col 3 — Especialidades */}
+          <div>
+            <h3 className="font-serif text-lg font-semibold mb-5">
               Especialidades
-            </h4>
-            <ul className="space-y-2 text-sm text-background/70">
-              {especialidades.slice(0, 4).map((e) => (
+            </h3>
+            <ul className="space-y-2.5 text-sm text-background/75">
+              {especialidades.map((e) => (
                 <li key={e.slug}>
                   <Link
                     to={`/especialidades/${e.slug}`}
                     className="hover:text-secondary transition-colors"
                   >
-                    {e.navLabel}
+                    {e.nome}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3 — Contato */}
+          {/* Col 4 — Contato */}
           <div>
             <h3 className="font-serif text-lg font-semibold mb-5">Contato</h3>
             <ul className="space-y-4 text-sm text-background/80">
@@ -109,7 +112,12 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 mt-1 flex-shrink-0 text-secondary" />
-                <span className="text-background/75">[INSERIR E-MAIL]</span>
+                <a
+                  href="mailto:vivazhen.vet@outlook.com"
+                  className="hover:text-secondary transition-colors break-all"
+                >
+                  vivazhen.vet@outlook.com
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-secondary" />
