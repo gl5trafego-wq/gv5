@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft, Check, AlertCircle } from "lucide-react";
+import { ArrowLeft, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -150,9 +150,6 @@ const Especialidade = () => {
         {/* Por que na VivaZhen */}
         <section className="section-padding gradient-lilac">
           <div className="container-wide max-w-3xl mx-auto text-center">
-            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 mx-auto">
-              <Check className="w-7 h-7 text-primary" />
-            </div>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
               Por que na VivaZhen Vet
             </h2>

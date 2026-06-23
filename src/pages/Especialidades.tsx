@@ -6,6 +6,7 @@ import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import EspecialidadeWhatsappButton from "@/components/EspecialidadeWhatsappButton";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-clinic.jpg";
 import {
   especialidades,
   buildWhatsappUrl,
@@ -40,15 +41,24 @@ const Especialidades = () => {
 
       <main>
         {/* Hero */}
-        <section className="section-padding gradient-lilac pt-32 md:pt-40">
-          <div className="container-wide text-center max-w-3xl mx-auto">
-            <span className="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">
+        <section className="relative section-padding pt-32 md:pt-40 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroImage}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/55 to-foreground/70" />
+          </div>
+          <div className="container-wide text-center max-w-3xl mx-auto relative z-10">
+            <span className="text-secondary font-medium tracking-widest uppercase text-sm mb-4 block">
               Especialidades
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-              Nossas <span className="text-primary">Especialidades</span>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-background leading-tight mb-6">
+              Nossas <span className="text-secondary">Especialidades</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-background/90 leading-relaxed">
               Cuidado veterinário especializado para cada necessidade do seu pet.
               Conheça as áreas em que a VivaZhen Vet é referência e agende com
               quem entende do assunto.
