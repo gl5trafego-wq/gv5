@@ -1,4 +1,6 @@
-import { Cat, Stethoscope, Sparkles, Apple, Activity, Bone, Heart, Eye } from "lucide-react";
+import { Cat, Stethoscope, Sparkles, Apple, Activity, Bone, Heart, Eye, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -119,6 +121,16 @@ const Services = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* CTA: ver todas as especialidades */}
+        <div className="flex justify-center mt-12">
+          <Button asChild variant="premium" size="xl" className="whitespace-normal text-center">
+            <Link to="/especialidades">
+              Conheça todas as nossas especialidades
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
