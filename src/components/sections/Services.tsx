@@ -91,16 +91,17 @@ const Services = () => {
               }`}
             >
               <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors ${
+                className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 transition-colors ${
                   service.highlight
-                    ? "bg-primary-foreground/20"
-                    : "bg-lilac-light group-hover:bg-primary/10"
+                    ? "bg-primary-foreground"
+                    : "bg-primary"
                 }`}
               >
                 <service.icon
                   className={`w-7 h-7 ${
-                    service.highlight ? "text-primary-foreground" : "text-primary"
+                    service.highlight ? "text-primary" : "text-primary-foreground"
                   }`}
+                  strokeWidth={2.25}
                 />
               </div>
               <h3
