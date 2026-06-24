@@ -49,7 +49,7 @@ const Especialidades = () => {
               aria-hidden="true"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/55 to-foreground/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-foreground/90 via-foreground/80 to-foreground/90" />
           </div>
           <div className="container-wide text-center max-w-3xl mx-auto relative z-10">
             <span className="text-secondary font-medium tracking-widest uppercase text-sm mb-4 block">
