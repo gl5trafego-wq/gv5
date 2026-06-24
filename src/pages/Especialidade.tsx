@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import EspecialidadeWhatsappButton from "@/components/EspecialidadeWhatsappButton";
+import heroImage from "@/assets/hero-clinic.jpg";
 import { getEspecialidade, PORQUE_VIVAZHEN } from "@/data/especialidades";
 
 const Especialidade = () => {
@@ -58,21 +59,30 @@ const Especialidade = () => {
 
       <main>
         {/* Hero */}
-        <section className="section-padding gradient-lilac pt-32 md:pt-40">
-          <div className="container-wide max-w-4xl mx-auto">
+        <section className="relative section-padding pt-32 md:pt-40 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroImage}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-foreground/90 via-foreground/80 to-foreground/90" />
+          </div>
+          <div className="container-wide max-w-4xl mx-auto relative z-10">
             <Link
               to="/especialidades"
-              className="inline-flex items-center gap-2 text-primary font-medium mb-8 hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-secondary font-medium mb-8 hover:gap-3 transition-all"
             >
               <ArrowLeft className="w-4 h-4" /> Ver todas as especialidades
             </Link>
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-              <Icon className="w-8 h-8 text-primary" />
+            <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6">
+              <Icon className="w-8 h-8 text-primary-foreground" strokeWidth={2.25} />
             </div>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-background leading-tight mb-6">
               {data.h1}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+            <p className="text-lg md:text-xl text-background/90 leading-relaxed mb-10 max-w-3xl">
               {data.subheadline}
             </p>
             <EspecialidadeWhatsappButton

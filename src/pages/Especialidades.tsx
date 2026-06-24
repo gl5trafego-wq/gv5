@@ -49,7 +49,7 @@ const Especialidades = () => {
               aria-hidden="true"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/55 to-foreground/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-foreground/90 via-foreground/80 to-foreground/90" />
           </div>
           <div className="container-wide text-center max-w-3xl mx-auto relative z-10">
             <span className="text-secondary font-medium tracking-widest uppercase text-sm mb-4 block">
@@ -83,8 +83,16 @@ const Especialidades = () => {
                       aria-label={`Saiba mais sobre ${e.nome}`}
                     />
                     <div className="relative z-10 flex flex-col h-full">
-                      <div className="w-14 h-14 rounded-xl bg-lilac-light group-hover:bg-primary/10 flex items-center justify-center mb-6 transition-colors">
-                        <Icon className="w-7 h-7 text-primary" />
+                      <div className="flex items-center justify-end mb-4">
+                        <Link
+                          to={`/especialidades/${e.slug}`}
+                          className="relative z-10 inline-flex items-center gap-1 text-primary font-semibold text-sm hover:gap-2 transition-all"
+                        >
+                          Conheça a especialidade <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      </div>
+                      <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-6">
+                        <Icon className="w-7 h-7 text-primary-foreground" strokeWidth={2.25} />
                       </div>
                       <h2 className="font-serif text-xl font-semibold text-foreground mb-3">
                         {e.nome}
@@ -92,12 +100,6 @@ const Especialidades = () => {
                       <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                         {e.descricaoCard}
                       </p>
-                      <Link
-                        to={`/especialidades/${e.slug}`}
-                        className="relative z-10 inline-flex items-center gap-1 text-primary font-semibold mb-5 hover:gap-2 transition-all"
-                      >
-                        Saiba mais <ArrowRight className="w-4 h-4" />
-                      </Link>
                       <div className="relative z-10">
                         <EspecialidadeWhatsappButton
                           slug={e.slug}

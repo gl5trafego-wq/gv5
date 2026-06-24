@@ -1,12 +1,12 @@
 import {
   Cat,
-  Heart,
+  Droplet,
   Eye,
-  Sparkles,
+  PawPrint,
   Apple,
-  Activity,
+  Atom,
   Bone,
-  Stethoscope,
+  Soup,
   type LucideIcon,
 } from "lucide-react";
 
@@ -68,7 +68,7 @@ export const especialidades: Especialidade[] = [
     slug: "nefrologia",
     nome: "Nefrologia",
     navLabel: "Nefrologia",
-    icon: Heart,
+    icon: Droplet,
     descricaoCard:
       "Diagnóstico e acompanhamento de doenças renais, comuns em gatos idosos, com protocolos atualizados para preservar a qualidade de vida.",
     h1: "Nefrologia Veterinária na VivaZhen Vet",
@@ -136,7 +136,7 @@ export const especialidades: Especialidade[] = [
     slug: "dermatologia-veterinaria",
     nome: "Dermatologia Veterinária",
     navLabel: "Dermatologia",
-    icon: Sparkles,
+    icon: PawPrint,
     descricaoCard:
       "Investigação e tratamento de alergias, coceiras, queda de pelo e infecções de pele, devolvendo o bem-estar do seu pet.",
     h1: "Dermatologia Veterinária na VivaZhen Vet",
@@ -204,7 +204,7 @@ export const especialidades: Especialidade[] = [
     slug: "endocrinologia",
     nome: "Endocrinologia",
     navLabel: "Endocrinologia",
-    icon: Activity,
+    icon: Atom,
     descricaoCard:
       "Tratamento de distúrbios hormonais como diabetes e hipotireoidismo, com acompanhamento contínuo para manter o equilíbrio do organismo.",
     h1: "Endocrinologia Veterinária na VivaZhen Vet",
@@ -272,7 +272,7 @@ export const especialidades: Especialidade[] = [
     slug: "gastroenterologia",
     nome: "Gastroenterologia",
     navLabel: "Gastroenterologia",
-    icon: Stethoscope,
+    icon: Soup,
     descricaoCard:
       "Cuidado especializado para distúrbios digestivos e gastrointestinais: vômitos, diarreias e problemas de absorção.",
     h1: "Gastroenterologia Veterinária na VivaZhen Vet",
