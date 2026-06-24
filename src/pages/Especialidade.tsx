@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import EspecialidadeWhatsappButton from "@/components/EspecialidadeWhatsappButton";
+import heroImage from "@/assets/hero-clinic.jpg";
 import { getEspecialidade, PORQUE_VIVAZHEN } from "@/data/especialidades";
 
 const Especialidade = () => {
