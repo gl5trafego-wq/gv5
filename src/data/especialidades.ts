@@ -1,12 +1,12 @@
 import {
   Cat,
-  Heart,
+  Droplet,
   Eye,
-  Sparkles,
+  PawPrint,
   Apple,
-  Activity,
+  Atom,
   Bone,
-  Stethoscope,
+  Soup,
   type LucideIcon,
 } from "lucide-react";
 
