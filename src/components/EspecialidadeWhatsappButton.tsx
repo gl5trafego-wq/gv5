@@ -9,6 +9,7 @@ type Props = {
   variant?: ButtonProps["variant"];
   size?: ButtonProps["size"];
   className?: string;
+  ctaVariante?: "hero" | "pos-sinais" | "pos-atendimento" | "final";
 };
 
 declare global {
@@ -24,6 +25,7 @@ const EspecialidadeWhatsappButton = ({
   variant = "premium",
   size = "xl",
   className,
+  ctaVariante = "hero",
 }: Props) => {
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -31,6 +33,7 @@ const EspecialidadeWhatsappButton = ({
     window.dataLayer.push({
       event: "click_whatsapp_especialidade",
       especialidade: slug,
+      cta_variante: ctaVariante,
     });
     window.open(buildWhatsappUrl(message), "_blank", "noopener,noreferrer");
   };
@@ -42,6 +45,7 @@ const EspecialidadeWhatsappButton = ({
       className={`whitespace-normal text-center ${className ?? ""}`}
       onClick={handleClick}
       data-especialidade={slug}
+      data-cta-variante={ctaVariante}
     >
       <Phone className="w-5 h-5 flex-shrink-0" />
       {label}
