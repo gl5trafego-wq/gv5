@@ -52,7 +52,7 @@ const Hero = () => {
       {/* Trust Bar */}
       <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border">
         <div className="container-wide py-4 md:py-6">
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-16 animate-fade-up delay-400">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center sm:justify-center gap-3 sm:gap-8 md:gap-16 animate-fade-up delay-400 max-w-sm sm:max-w-none mx-auto">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-lilac-light flex items-center justify-center">
                 <Award className="w-5 h-5 text-primary" />
