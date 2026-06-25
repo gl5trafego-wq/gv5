@@ -210,6 +210,7 @@ const Especialidade = () => {
                 slug={data.slug}
                 message={data.whatsappMessage}
                 variant="whatsapp"
+                ctaVariante="final"
               />
             </div>
             <div className="mt-10">
