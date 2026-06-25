@@ -21,6 +21,9 @@ const Especialidade = () => {
 
   const Icon = data.icon;
   const canonical = `https://gv5.lovable.app/especialidades/${data.slug}`;
+  const posSinais = CTA_POS_SINAIS[data.slug];
+  const posAtendimentoLabel =
+    CTA_POS_ATENDIMENTO_LABEL[data.slug] ?? "Agende a consulta do seu pet";
 
   const schema = {
     "@context": "https://schema.org",
