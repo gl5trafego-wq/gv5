@@ -6,7 +6,12 @@ import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import EspecialidadeWhatsappButton from "@/components/EspecialidadeWhatsappButton";
 import heroImage from "@/assets/hero-clinic.jpg";
-import { getEspecialidade, PORQUE_VIVAZHEN } from "@/data/especialidades";
+import {
+  getEspecialidade,
+  PORQUE_VIVAZHEN,
+  CTA_POS_SINAIS,
+  CTA_POS_ATENDIMENTO_LABEL,
+} from "@/data/especialidades";
 
 const Especialidade = () => {
   const { slug } = useParams<{ slug: string }>();
