@@ -316,3 +316,59 @@ export const buildWhatsappUrl = (message: string) =>
 
 export const getEspecialidade = (slug?: string) =>
   especialidades.find((e) => e.slug === slug);
+
+export type CtaExtra = { label: string; message: string };
+
+export const CTA_POS_SINAIS: Record<string, CtaExtra> = {
+  "especialistas-em-felinos": {
+    label: "Cuide da saúde do seu gato agora",
+    message:
+      "Olá! Notei alguns sinais no meu gato e gostaria de agendar uma avaliação de Medicina Felina.",
+  },
+  nefrologia: {
+    label: "Proteja os rins do seu pet",
+    message:
+      "Olá! Meu pet apresenta sinais de problema renal e gostaria de agendar uma consulta de Nefrologia.",
+  },
+  "oftalmologia-veterinaria": {
+    label: "Cuide já dos olhos do seu pet",
+    message:
+      "Olá! Notei alterações nos olhos do meu pet e gostaria de agendar uma avaliação de Oftalmologia Veterinária.",
+  },
+  "dermatologia-veterinaria": {
+    label: "Acabe com a coceira do seu pet",
+    message:
+      "Olá! Meu pet está com coceira/problema de pele e gostaria de agendar uma consulta de Dermatologia Veterinária.",
+  },
+  nutrologia: {
+    label: "Monte a dieta ideal do seu pet",
+    message:
+      "Olá! Gostaria de agendar uma avaliação de Nutrologia para definir a alimentação ideal do meu pet.",
+  },
+  endocrinologia: {
+    label: "Equilibre os hormônios do seu pet",
+    message:
+      "Olá! Meu pet apresenta sinais hormonais e gostaria de agendar uma consulta de Endocrinologia.",
+  },
+  "ortopedia-e-neurologia": {
+    label: "Devolva o movimento ao seu pet",
+    message:
+      "Olá! Meu pet está com dificuldade de locomoção e gostaria de agendar uma avaliação de Ortopedia e Neurologia.",
+  },
+  gastroenterologia: {
+    label: "Resolva o problema digestivo do seu pet",
+    message:
+      "Olá! Meu pet está com problemas digestivos e gostaria de agendar uma consulta de Gastroenterologia.",
+  },
+};
+
+export const CTA_POS_ATENDIMENTO_LABEL: Record<string, string> = {
+  "especialistas-em-felinos": "Agende a consulta do seu gato",
+  nefrologia: "Marque a avaliação renal do seu pet",
+  "oftalmologia-veterinaria": "Marque a avaliação oftálmica do seu pet",
+  "dermatologia-veterinaria": "Marque a consulta dermatológica do seu pet",
+  nutrologia: "Marque a avaliação nutricional do seu pet",
+  endocrinologia: "Marque a avaliação endocrinológica do seu pet",
+  "ortopedia-e-neurologia": "Marque a avaliação ortopédica do seu pet",
+  gastroenterologia: "Marque a avaliação gastroenterológica do seu pet",
+};

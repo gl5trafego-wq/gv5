@@ -174,51 +174,51 @@ const Header = () => {
 
       {isMobileMenuOpen && (
         <div
-          className="lg:hidden fixed inset-0 top-0 bg-black/40 z-[55]"
+          className="lg:hidden fixed inset-0 top-0 bg-foreground/60 z-[55]"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
 
       <div
-        className={`lg:hidden fixed top-[64px] left-0 right-0 max-h-[calc(100vh-64px)] overflow-y-auto bg-background/98 backdrop-blur-md shadow-medium z-[60] transition-all duration-300 ${
+        className={`lg:hidden fixed top-[64px] left-0 right-0 max-h-[calc(100vh-64px)] overflow-y-auto bg-background shadow-elevated border-t border-border z-[60] transition-all duration-300 ${
           isMobileMenuOpen
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-2"
         }`}
       >
-        <nav className="container-wide py-6 flex flex-col gap-2">
+        <nav className="container-wide py-6 flex flex-col divide-y divide-border">
           {sectionItems.slice(0, 2).map((item) => (
             <button
               key={item.label}
               type="button"
               onClick={() => goToSection(item.hash)}
-              className="text-left text-base font-medium text-muted-foreground hover:text-primary transition-colors py-3 min-h-[44px]"
+              className="text-left text-lg font-semibold text-foreground hover:text-primary transition-colors py-4 min-h-[52px]"
             >
               {item.label}
             </button>
           ))}
 
           {/* Especialidades collapsible */}
-          <div>
+          <div className="py-1">
             <button
               type="button"
               onClick={() => setIsMobileEspOpen((v) => !v)}
-              className="w-full flex items-center justify-between text-base font-medium text-muted-foreground hover:text-primary transition-colors py-3 min-h-[44px]"
+              className="w-full flex items-center justify-between text-lg font-semibold text-foreground hover:text-primary transition-colors py-4 min-h-[52px]"
               aria-expanded={isMobileEspOpen}
             >
               Especialidades
               <ChevronDown
-                className={`w-4 h-4 transition-transform ${
+                className={`w-5 h-5 transition-transform ${
                   isMobileEspOpen ? "rotate-180" : ""
                 }`}
               />
             </button>
             {isMobileEspOpen && (
-              <div className="pl-3 border-l-2 border-lilac-light ml-1 mb-2 flex flex-col">
+              <div className="pl-4 border-l-2 border-primary/40 ml-1 mb-3 flex flex-col">
                 <Link
                   to="/especialidades"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="py-2.5 text-sm font-semibold text-primary"
+                  className="py-3 text-base font-semibold text-primary"
                 >
                   Ver todas
                 </Link>
@@ -227,7 +227,7 @@ const Header = () => {
                     key={e.slug}
                     to={`/especialidades/${e.slug}`}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="py-2.5 text-sm text-muted-foreground hover:text-primary"
+                    className="py-3 text-base font-medium text-foreground hover:text-primary transition-colors min-h-[44px]"
                   >
                     {e.navLabel}
                   </Link>
@@ -241,24 +241,26 @@ const Header = () => {
               key={item.label}
               type="button"
               onClick={() => goToSection(item.hash)}
-              className="text-left text-base font-medium text-muted-foreground hover:text-primary transition-colors py-3 min-h-[44px]"
+              className="text-left text-lg font-semibold text-foreground hover:text-primary transition-colors py-4 min-h-[52px]"
             >
               {item.label}
             </button>
           ))}
 
-          <Button
-            variant="premium"
-            size="lg"
-            className="mt-4 w-full"
-            onClick={() => {
-              openWhatsapp();
-              setIsMobileMenuOpen(false);
-            }}
-          >
-            <Phone className="w-4 h-4" />
-            Agendar Consulta
-          </Button>
+          <div className="pt-5">
+            <Button
+              variant="premium"
+              size="lg"
+              className="w-full"
+              onClick={() => {
+                openWhatsapp();
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              <Phone className="w-4 h-4" />
+              Agendar Consulta
+            </Button>
+          </div>
         </nav>
       </div>
     </header>

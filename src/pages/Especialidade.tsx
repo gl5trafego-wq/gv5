@@ -6,7 +6,12 @@ import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import EspecialidadeWhatsappButton from "@/components/EspecialidadeWhatsappButton";
 import heroImage from "@/assets/hero-clinic.jpg";
-import { getEspecialidade, PORQUE_VIVAZHEN } from "@/data/especialidades";
+import {
+  getEspecialidade,
+  PORQUE_VIVAZHEN,
+  CTA_POS_SINAIS,
+  CTA_POS_ATENDIMENTO_LABEL,
+} from "@/data/especialidades";
 
 const Especialidade = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -16,6 +21,9 @@ const Especialidade = () => {
 
   const Icon = data.icon;
   const canonical = `https://gv5.lovable.app/especialidades/${data.slug}`;
+  const posSinais = CTA_POS_SINAIS[data.slug];
+  const posAtendimentoLabel =
+    CTA_POS_ATENDIMENTO_LABEL[data.slug] ?? "Agende a consulta do seu pet";
 
   const schema = {
     "@context": "https://schema.org",
@@ -88,6 +96,7 @@ const Especialidade = () => {
             <EspecialidadeWhatsappButton
               slug={data.slug}
               message={data.whatsappMessage}
+              ctaVariante="hero"
             />
           </div>
         </section>
@@ -127,6 +136,16 @@ const Especialidade = () => {
                 </li>
               ))}
             </ul>
+            {posSinais && (
+              <div className="mt-10 flex justify-center">
+                <EspecialidadeWhatsappButton
+                  slug={data.slug}
+                  message={posSinais.message}
+                  label={posSinais.label}
+                  ctaVariante="pos-sinais"
+                />
+              </div>
+            )}
           </div>
         </section>
 
@@ -154,6 +173,14 @@ const Especialidade = () => {
                 </li>
               ))}
             </ol>
+            <div className="mt-10 flex justify-center">
+              <EspecialidadeWhatsappButton
+                slug={data.slug}
+                message={data.whatsappMessage}
+                label={posAtendimentoLabel}
+                ctaVariante="pos-atendimento"
+              />
+            </div>
           </div>
         </section>
 
@@ -183,6 +210,7 @@ const Especialidade = () => {
                 slug={data.slug}
                 message={data.whatsappMessage}
                 variant="whatsapp"
+                ctaVariante="final"
               />
             </div>
             <div className="mt-10">
