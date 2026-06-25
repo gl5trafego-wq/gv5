@@ -96,6 +96,7 @@ const Especialidade = () => {
             <EspecialidadeWhatsappButton
               slug={data.slug}
               message={data.whatsappMessage}
+              ctaVariante="hero"
             />
           </div>
         </section>
