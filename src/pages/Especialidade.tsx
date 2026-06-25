@@ -173,6 +173,14 @@ const Especialidade = () => {
                 </li>
               ))}
             </ol>
+            <div className="mt-10 flex justify-center">
+              <EspecialidadeWhatsappButton
+                slug={data.slug}
+                message={data.whatsappMessage}
+                label={posAtendimentoLabel}
+                ctaVariante="pos-atendimento"
+              />
+            </div>
           </div>
         </section>
 
