@@ -136,6 +136,16 @@ const Especialidade = () => {
                 </li>
               ))}
             </ul>
+            {posSinais && (
+              <div className="mt-10 flex justify-center">
+                <EspecialidadeWhatsappButton
+                  slug={data.slug}
+                  message={posSinais.message}
+                  label={posSinais.label}
+                  ctaVariante="pos-sinais"
+                />
+              </div>
+            )}
           </div>
         </section>
 
