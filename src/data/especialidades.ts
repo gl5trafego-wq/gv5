@@ -605,6 +605,41 @@ export const CTA_POS_SINAIS: Record<string, CtaExtra> = {
     message:
       "Olá! Meu pet está com problemas digestivos e gostaria de agendar uma consulta de Gastroenterologia.",
   },
+  pneumologia: {
+    label: "Cuide da respiração do seu pet",
+    message:
+      "Olá! Meu pet apresenta sinais respiratórios e gostaria de agendar uma consulta de Pneumologia.",
+  },
+  neurologia: {
+    label: "Investigue os sinais neurológicos do seu pet",
+    message:
+      "Olá! Meu pet apresenta sinais neurológicos e gostaria de agendar uma consulta de Neurologia.",
+  },
+  citologia: {
+    label: "Investigue já esse nódulo ou lesão",
+    message:
+      "Olá! Notei uma alteração no meu pet e gostaria de agendar uma consulta com exame de Citologia.",
+  },
+  ozonioterapia: {
+    label: "Saiba se a ozonioterapia é indicada",
+    message:
+      "Olá! Gostaria de saber se a Ozonioterapia é indicada para o caso do meu pet.",
+  },
+  odontologia: {
+    label: "Cuide da saúde bucal do seu pet",
+    message:
+      "Olá! Meu pet apresenta sinais bucais e gostaria de agendar uma consulta de Odontologia.",
+  },
+  cardiologia: {
+    label: "Avalie o coração do seu pet agora",
+    message:
+      "Olá! Meu pet apresenta sinais cardíacos e gostaria de agendar uma consulta de Cardiologia.",
+  },
+  vacinas: {
+    label: "Coloque a vacinação em dia",
+    message:
+      "Olá! Gostaria de agendar a vacinação do meu pet.",
+  },
 };
 
 export const CTA_POS_ATENDIMENTO_LABEL: Record<string, string> = {
@@ -616,4 +651,11 @@ export const CTA_POS_ATENDIMENTO_LABEL: Record<string, string> = {
   endocrinologia: "Marque a avaliação endocrinológica do seu pet",
   "ortopedia-e-neurologia": "Marque a avaliação ortopédica do seu pet",
   gastroenterologia: "Marque a avaliação gastroenterológica do seu pet",
+  pneumologia: "Marque a avaliação respiratória do seu pet",
+  neurologia: "Marque a avaliação neurológica do seu pet",
+  citologia: "Marque a coleta citológica do seu pet",
+  ozonioterapia: "Marque a sessão de ozonioterapia",
+  odontologia: "Marque a avaliação odontológica do seu pet",
+  cardiologia: "Marque a avaliação cardiológica do seu pet",
+  vacinas: "Marque a vacinação do seu pet",
 };
