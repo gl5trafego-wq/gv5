@@ -7,6 +7,13 @@ import {
   Atom,
   Bone,
   Soup,
+  Wind,
+  Brain,
+  Microscope,
+  Sparkles,
+  Smile,
+  Heart,
+  Syringe,
   type LucideIcon,
 } from "lucide-react";
 
