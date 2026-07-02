@@ -309,6 +309,244 @@ export const especialidades: Especialidade[] = [
     metaDescription:
       "Tratamento de vômitos, diarreias e distúrbios digestivos em cães e gatos em Santo André. Investigação gastroenterológica completa para o seu pet.",
   },
+  {
+    slug: "pneumologia",
+    nome: "Pneumologia",
+    navLabel: "Pneumologia",
+    icon: Wind,
+    descricaoCard:
+      "Diagnóstico e tratamento de doenças respiratórias, das vias aéreas superiores aos pulmões, para devolver o conforto respiratório ao seu pet.",
+    h1: "Pneumologia Veterinária na VivaZhen Vet",
+    subheadline:
+      "Diagnóstico e tratamento de doenças respiratórias para devolver o conforto respiratório ao seu pet.",
+    oQueE:
+      "A pneumologia cuida do sistema respiratório, das vias aéreas superiores aos pulmões. Tosse persistente, cansaço fácil e alterações na respiração podem indicar condições como bronquite, pneumonia, asma felina e outras doenças que precisam de diagnóstico preciso para tratamento adequado.",
+    sinais: [
+      "Tosse frequente ou persistente",
+      "Respiração ofegante ou com esforço",
+      "Cansaço fácil em atividades simples",
+      "Espirros e secreção nasal recorrentes",
+      "Ruídos anormais ao respirar",
+      "Coloração azulada nas mucosas",
+    ],
+    atendimento: [
+      "Avaliação clínica e ausculta respiratória detalhada.",
+      "Exames complementares (imagem e laboratoriais) quando indicados.",
+      "Plano de tratamento individualizado.",
+      "Acompanhamento contínuo da evolução respiratória.",
+    ],
+    ctaFinal: "Agende a avaliação respiratória do seu pet.",
+    whatsappMessage: msg(
+      "Olá! Vim pelo site e gostaria de agendar uma consulta de Pneumologia para o meu pet.",
+    ),
+    metaTitle: "Pneumologia Veterinária | VivaZhen Vet — Santo André",
+    metaDescription:
+      "Diagnóstico e tratamento de doenças respiratórias em cães e gatos em Santo André. Cuide da saúde pulmonar do seu pet com atendimento especializado.",
+  },
+  {
+    slug: "neurologia",
+    nome: "Neurologia",
+    navLabel: "Neurologia",
+    icon: Brain,
+    descricaoCard:
+      "Investigação e tratamento de doenças do cérebro, medula e nervos, com foco em recuperar o bem-estar neurológico do seu pet.",
+    h1: "Neurologia Veterinária na VivaZhen Vet",
+    subheadline:
+      "Investigação e tratamento de doenças do sistema nervoso para recuperar o bem-estar do seu pet.",
+    oQueE:
+      "A neurologia veterinária cuida das doenças que envolvem o cérebro, a medula espinhal e os nervos periféricos. Convulsões, alterações de equilíbrio, fraqueza e mudanças de comportamento podem ter origem neurológica e exigem investigação especializada para diagnóstico e conduta corretos.",
+    sinais: [
+      "Convulsões ou crises epilépticas",
+      "Perda de equilíbrio ou andar cambaleante",
+      "Fraqueza ou paralisia em membros",
+      "Movimentos involuntários ou tremores",
+      "Alterações de comportamento repentinas",
+      "Dor cervical ou lombar sem causa aparente",
+    ],
+    atendimento: [
+      "Avaliação clínica e exame neurológico completo.",
+      "Exames complementares (imagem e laboratoriais) quando indicados.",
+      "Plano de tratamento individualizado.",
+      "Acompanhamento contínuo e reavaliações.",
+    ],
+    ctaFinal: "Agende a avaliação neurológica do seu pet.",
+    whatsappMessage: msg(
+      "Olá! Vim pelo site e gostaria de agendar uma consulta de Neurologia para o meu pet.",
+    ),
+    metaTitle: "Neurologia Veterinária | VivaZhen Vet — Santo André",
+    metaDescription:
+      "Diagnóstico e tratamento de doenças neurológicas em cães e gatos em Santo André. Cuidado especializado para o sistema nervoso do seu pet.",
+  },
+  {
+    slug: "citologia",
+    nome: "Citologia",
+    navLabel: "Citologia",
+    icon: Microscope,
+    descricaoCard:
+      "Análise citológica para diagnóstico rápido e preciso de nódulos, feridas e alterações teciduais, orientando a melhor conduta clínica.",
+    h1: "Citologia Veterinária na VivaZhen Vet",
+    subheadline:
+      "Análise citológica para diagnóstico rápido e preciso, orientando a melhor conduta clínica para o seu pet.",
+    oQueE:
+      "A citologia é um exame que analisa células coletadas de nódulos, feridas, secreções e órgãos, permitindo identificar processos inflamatórios, infecciosos e tumorais de forma pouco invasiva. É uma ferramenta essencial para agilizar o diagnóstico e definir a conduta mais adequada.",
+    sinais: [
+      "Nódulos, caroços ou massas na pele",
+      "Feridas que não cicatrizam",
+      "Aumento de linfonodos (ínguas)",
+      "Secreções ou lesões suspeitas",
+      "Acompanhamento de tumores já diagnosticados",
+      "Investigação de alterações em órgãos internos",
+    ],
+    atendimento: [
+      "Avaliação clínica e identificação da área a ser analisada.",
+      "Coleta pouco invasiva por punção aspirativa ou raspado.",
+      "Análise laboratorial e interpretação dos resultados.",
+      "Orientação sobre a conduta a seguir a partir do diagnóstico.",
+    ],
+    ctaFinal: "Agende a avaliação do seu pet.",
+    whatsappMessage: msg(
+      "Olá! Vim pelo site e gostaria de agendar uma consulta com exame de Citologia para o meu pet.",
+    ),
+    metaTitle: "Citologia Veterinária | VivaZhen Vet — Santo André",
+    metaDescription:
+      "Exame citológico para diagnóstico de nódulos, feridas e alterações em cães e gatos em Santo André. Precisão e agilidade no diagnóstico do seu pet.",
+  },
+  {
+    slug: "ozonioterapia",
+    nome: "Ozonioterapia",
+    navLabel: "Ozonioterapia",
+    icon: Sparkles,
+    descricaoCard:
+      "Terapia complementar com ozônio medicinal, indicada como suporte em diversos tratamentos clínicos, cicatrizações e processos inflamatórios.",
+    h1: "Ozonioterapia Veterinária na VivaZhen Vet",
+    subheadline:
+      "Terapia complementar com ozônio medicinal como suporte em diversos tratamentos clínicos.",
+    oQueE:
+      "A ozonioterapia utiliza o ozônio medicinal como recurso terapêutico complementar em diversas condições clínicas. Pode auxiliar em processos inflamatórios, infecciosos, dores crônicas, cicatrização de feridas e no suporte a tratamentos convencionais, sempre com indicação médica veterinária.",
+    sinais: [
+      "Feridas de difícil cicatrização",
+      "Processos inflamatórios crônicos",
+      "Doenças de pele recorrentes",
+      "Dores articulares ou musculares crônicas",
+      "Suporte a tratamentos de doenças crônicas",
+      "Recuperação pós-operatória",
+    ],
+    atendimento: [
+      "Avaliação clínica e indicação individualizada.",
+      "Definição da via de aplicação mais adequada.",
+      "Protocolo de sessões conforme cada caso.",
+      "Acompanhamento contínuo da resposta ao tratamento.",
+    ],
+    ctaFinal: "Agende a avaliação do seu pet.",
+    whatsappMessage: msg(
+      "Olá! Vim pelo site e gostaria de saber mais sobre Ozonioterapia para o meu pet.",
+    ),
+    metaTitle: "Ozonioterapia Veterinária | VivaZhen Vet — Santo André",
+    metaDescription:
+      "Ozonioterapia veterinária em Santo André. Terapia complementar com ozônio medicinal como suporte a tratamentos clínicos para cães e gatos.",
+  },
+  {
+    slug: "odontologia",
+    nome: "Odontologia",
+    navLabel: "Odontologia",
+    icon: Smile,
+    descricaoCard:
+      "Cuidado com a saúde bucal do seu pet: avaliação, prevenção e tratamento de doenças periodontais e alterações orais.",
+    h1: "Odontologia Veterinária na VivaZhen Vet",
+    subheadline:
+      "Cuidado com a saúde bucal do seu pet, da prevenção ao tratamento de doenças periodontais.",
+    oQueE:
+      "A odontologia veterinária cuida da saúde da boca, dentes e gengivas. A doença periodontal é uma das condições mais comuns em cães e gatos, e pode impactar não só a boca, mas a saúde geral do animal. Avaliações periódicas e o cuidado adequado fazem toda a diferença na qualidade de vida.",
+    sinais: [
+      "Mau hálito persistente",
+      "Acúmulo visível de tártaro",
+      "Gengivas vermelhas, inchadas ou que sangram",
+      "Dificuldade para se alimentar",
+      "Dentes soltos, quebrados ou faltando",
+      "Salivação excessiva ou dor ao mastigar",
+    ],
+    atendimento: [
+      "Avaliação clínica e da cavidade oral.",
+      "Exames complementares quando indicados.",
+      "Plano de tratamento e orientações preventivas.",
+      "Acompanhamento contínuo da saúde bucal.",
+    ],
+    ctaFinal: "Agende a avaliação odontológica do seu pet.",
+    whatsappMessage: msg(
+      "Olá! Vim pelo site e gostaria de agendar uma consulta de Odontologia para o meu pet.",
+    ),
+    metaTitle: "Odontologia Veterinária | VivaZhen Vet — Santo André",
+    metaDescription:
+      "Avaliação, prevenção e tratamento odontológico para cães e gatos em Santo André. Cuide da saúde bucal do seu pet com atendimento especializado.",
+  },
+  {
+    slug: "cardiologia",
+    nome: "Cardiologia",
+    navLabel: "Cardiologia",
+    icon: Heart,
+    descricaoCard:
+      "Avaliação e acompanhamento clínico de doenças cardíacas para preservar a qualidade de vida do seu pet.",
+    h1: "Cardiologia Veterinária na VivaZhen Vet",
+    subheadline:
+      "Avaliação e acompanhamento clínico de doenças cardíacas para preservar a qualidade de vida do seu pet.",
+    oQueE:
+      "A cardiologia veterinária cuida da saúde do coração e do sistema circulatório. Muitas doenças cardíacas evoluem de forma silenciosa, especialmente em pets idosos e em raças predispostas. O diagnóstico precoce e o acompanhamento adequado são fundamentais para manter o pet estável e com boa qualidade de vida.",
+    sinais: [
+      "Cansaço fácil ou intolerância a exercícios",
+      "Tosse persistente, principalmente à noite",
+      "Respiração ofegante em repouso",
+      "Desmaios ou episódios de fraqueza",
+      "Aumento do volume abdominal",
+      "Pet idoso ou de raça predisposta sem avaliação cardíaca",
+    ],
+    atendimento: [
+      "Avaliação clínica e ausculta cardíaca detalhada.",
+      "Exames complementares (imagem e laboratoriais) quando indicados.",
+      "Plano de tratamento e controle individualizado.",
+      "Acompanhamento contínuo com reavaliações periódicas.",
+    ],
+    ctaFinal: "Agende a avaliação cardiológica do seu pet.",
+    whatsappMessage: msg(
+      "Olá! Vim pelo site e gostaria de agendar uma consulta de Cardiologia para o meu pet.",
+    ),
+    metaTitle: "Cardiologia Veterinária | VivaZhen Vet — Santo André",
+    metaDescription:
+      "Avaliação e acompanhamento de doenças cardíacas em cães e gatos em Santo André. Cuide da saúde do coração do seu pet com atendimento especializado.",
+  },
+  {
+    slug: "vacinas",
+    nome: "Vacinas",
+    navLabel: "Vacinas",
+    icon: Syringe,
+    descricaoCard:
+      "Protocolo vacinal individualizado, com orientação sobre as vacinas indicadas para cada fase da vida do seu pet.",
+    h1: "Vacinação na VivaZhen Vet",
+    subheadline:
+      "Protocolo vacinal individualizado para proteger o seu pet em cada fase da vida.",
+    oQueE:
+      "A vacinação é uma das principais formas de prevenção de doenças graves em cães e gatos. O protocolo ideal varia conforme a idade, o estilo de vida e o histórico do animal. Na VivaZhen Vet, cada plano vacinal é definido individualmente, após avaliação clínica, garantindo segurança e eficácia.",
+    sinais: [
+      "Filhotes iniciando o protocolo vacinal",
+      "Pets adultos com reforço anual em atraso",
+      "Animais que convivem com outros pets",
+      "Pets que passeiam ou frequentam ambientes coletivos",
+      "Dúvidas sobre quais vacinas são indicadas",
+      "Histórico vacinal desconhecido",
+    ],
+    atendimento: [
+      "Avaliação clínica antes da aplicação.",
+      "Definição do protocolo vacinal individualizado.",
+      "Aplicação em ambiente controlado e seguro.",
+      "Orientação sobre reforços e cuidados pós-vacinais.",
+    ],
+    ctaFinal: "Agende a vacinação do seu pet.",
+    whatsappMessage: msg(
+      "Olá! Vim pelo site e gostaria de agendar a vacinação do meu pet.",
+    ),
+    metaTitle: "Vacinação Veterinária | VivaZhen Vet — Santo André",
+    metaDescription:
+      "Protocolo vacinal individualizado para cães e gatos em Santo André. Proteja o seu pet em cada fase da vida com orientação especializada.",
+  },
 ];
 
 export const PORQUE_VIVAZHEN =
